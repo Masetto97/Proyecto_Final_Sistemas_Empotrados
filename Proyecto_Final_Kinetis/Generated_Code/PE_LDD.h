@@ -6,7 +6,7 @@
 **     Version     : Component 01.046, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 17:13, # CodeGen: 0
+**     Date/Time   : 2021-04-01, 18:11, # CodeGen: 7
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -56,6 +56,43 @@
 #include "PE_Error.h"
 #include "PE_Const.h"
 #include "Pins1.h"
+#include "PulsadorHora.h"
+#include "ExtIntLdd1.h"
+#include "PulsadorTemperatura.h"
+#include "ExtIntLdd2.h"
+#include "PulsadorAjuste.h"
+#include "ExtIntLdd3.h"
+#include "LedD1.h"
+#include "BitIoLdd1.h"
+#include "LedD2.h"
+#include "BitIoLdd2.h"
+#include "LedD3.h"
+#include "BitIoLdd3.h"
+#include "LedD4.h"
+#include "BitIoLdd4.h"
+#include "TU1.h"
+#include "Zumbador.h"
+#include "PwmLdd1.h"
+#include "Display.h"
+#include "STCP1.h"
+#include "BitIoLdd5.h"
+#include "DS1.h"
+#include "BitIoLdd6.h"
+#include "SHCP1.h"
+#include "BitIoLdd7.h"
+#include "WAIT1.h"
+#include "MCUC1.h"
+#include "PuertoSerie.h"
+#include "ASerialLdd1.h"
+#include "Tiempo.h"
+#include "CS1.h"
+#include "UTIL1.h"
+#include "Contador.h"
+#include "TimerIntLdd1.h"
+#include "TU2.h"
+#include "Temperatura.h"
+#include "AdcLdd1.h"
+#include "WAIT2.h"
 
 
 /*

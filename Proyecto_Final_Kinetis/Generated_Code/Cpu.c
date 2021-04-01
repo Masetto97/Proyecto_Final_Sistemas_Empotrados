@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K64P144M120SF5RM, Rev.2, January 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 17:13, # CodeGen: 0
+**     Date/Time   : 2021-04-01, 18:11, # CodeGen: 7
 **     Abstract    :
 **
 **     Settings    :
@@ -106,8 +106,64 @@ void Common_Init(void)
 #if CPU_COMPONENTS_INIT
 void Components_Init(void)
 {
+  /* ### ExtInt_LDD "ExtIntLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)ExtIntLdd1_Init(NULL);
+  /* ### ExtInt_LDD "ExtIntLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)ExtIntLdd2_Init(NULL);
+  /* ### ExtInt_LDD "ExtIntLdd3" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)ExtIntLdd3_Init(NULL);
+  /* ### BitIO_LDD "BitIoLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd1_Init(NULL);
+  /* ### BitIO_LDD "BitIoLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd2_Init(NULL);
+  /* ### BitIO_LDD "BitIoLdd3" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd3_Init(NULL);
+  /* ### BitIO_LDD "BitIoLdd4" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd4_Init(NULL);
+  /* ### PWM_LDD "PwmLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)PwmLdd1_Init(NULL);
+  /* ### McuLibConfig "MCUC1" init code ... */
+  WAIT1_Init();
+  /* ### BitIO_LDD "BitIoLdd5" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd5_Init(NULL);
+  /* ### BitIO_LDD "BitIoLdd6" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd6_Init(NULL);
+  /* ### BitIO_LDD "BitIoLdd7" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd7_Init(NULL);
+  /* ### 74HC595 "Display" init code ... */
+  Display_Init();
+  /* ### Asynchro serial "PuertoSerie" init code ... */
+  PuertoSerie_Init();
+  /* ### CriticalSection "CS1" init code ... */
+  /* ### GenericTimeDate "Tiempo" init code ... */
+#if Tiempo_INIT_IN_STARTUP
+  (void)Tiempo_Init();
+#endif
+  /* ### TimerInt_LDD "TimerIntLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)TimerIntLdd1_Init(NULL);
+  /* ### TimerInt "Contador" init code ... */
+  /* ### ADC "Temperatura" init code ... */
+  Temperatura_Init();
+  WAIT2_Init();
 }
 #endif /* CPU_COMPONENTS_INIT */
+
+/*
+** ===================================================================
+**     Method      :  Cpu_Cpu_ivINT_PORTB (component MK64FN1M0LQ12)
+**
+**     Description :
+**         This ISR services the ivINT_PORTB interrupt shared by several 
+**         components.
+**         This method is internal. It is used by Processor Expert only.
+** ===================================================================
+*/
+PE_ISR(Cpu_ivINT_PORTB)
+{
+    ExtIntLdd1_Interrupt();              /* Call the service routine */
+    ExtIntLdd2_Interrupt();              /* Call the service routine */
+    ExtIntLdd3_Interrupt();              /* Call the service routine */
+}
 
 /*
 ** ===================================================================

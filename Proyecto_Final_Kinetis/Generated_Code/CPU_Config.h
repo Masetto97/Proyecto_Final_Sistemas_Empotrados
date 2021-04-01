@@ -6,7 +6,7 @@
 **     Version     : Component 01.046, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 17:13, # CodeGen: 0
+**     Date/Time   : 2021-04-01, 18:11, # CodeGen: 7
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -641,19 +641,19 @@ typedef struct {
 
 /* JTAG TDI pin initialization 
    Property: Common settings\Debug interface (JTAG)\TDI pin */
-#define CPU_JTAG_TDI_PIN                                   0x01U     /* JTAG TDI pin initialized */ 
+#define CPU_JTAG_TDI_PIN                                   0x00U     /* JTAG TDI pin not initialized */ 
 
 /* JTAG TDO pin initialization 
    Property: Common settings\Debug interface (JTAG)\TDO pin */
-#define CPU_JTAG_TDO_PIN                                   0x01U     /* JTAG TDO pin initialized */ 
+#define CPU_JTAG_TDO_PIN                                   0x00U     /* JTAG TDO pin not initialized */ 
 
 /* JTAG TCK pin initialization 
    Property: Common settings\Debug interface (JTAG)\TCK pin */
-#define CPU_JTAG_TCK_PIN                                   0x01U     /* JTAG TCK pin initialized */ 
+#define CPU_JTAG_TCK_PIN                                   0x00U     /* JTAG TCK pin not initialized */ 
 
 /* JTAG TMS pin initialization 
    Property: Common settings\Debug interface (JTAG)\TMS pin */
-#define CPU_JTAG_TMS_PIN                                   0x01U     /* JTAG TMS pin initialized */ 
+#define CPU_JTAG_TMS_PIN                                   0x00U     /* JTAG TMS pin not initialized */ 
 
 /* JTAG TRST pin initialization 
    Property: Common settings\Debug interface (JTAG)\nTRST pin */
@@ -710,7 +710,7 @@ typedef struct {
 
 /* Components_Init() parameterization settings */
 
-#define CPU_COMPONENTS_INIT                                0x00U     /* Components_Init() method is not called in PE_low_level_init() */ 
+#define CPU_COMPONENTS_INIT                                0x01U     /* Call Components_Init() method in PE_low_level_init() */ 
 
 /* Interrupts priority level settings */
   

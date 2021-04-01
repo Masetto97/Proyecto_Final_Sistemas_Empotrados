@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K64P144M120SF5RM, Rev.2, January 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 17:13, # CodeGen: 0
+**     Date/Time   : 2021-04-01, 17:20, # CodeGen: 1
 **     Abstract    :
 **
 **     Settings    :
@@ -114,6 +114,19 @@ void Components_Init(void);
 #endif /* CPU_COMPONENTS_INIT */
 
 /* Method synonyms. Following constants maps static CPU methods with enabled user methods of which names are derived from the CPU component name */
+
+/* {Default RTOS Adapter} ISR function prototype */
+PE_ISR(Cpu_ivINT_PORTB);
+/*
+** ===================================================================
+**     Method      :  Cpu_Cpu_ivINT_PORTB (component MK64FN1M0LQ12)
+**
+**     Description :
+**         This ISR services the ivINT_PORTB interrupt shared by several 
+**         components.
+**         This method is internal. It is used by Processor Expert only.
+** ===================================================================
+*/
 
 
 /*

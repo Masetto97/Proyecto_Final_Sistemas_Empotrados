@@ -6,7 +6,7 @@
 **     Version     : Component 01.046, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 17:13, # CodeGen: 0
+**     Date/Time   : 2021-04-01, 17:54, # CodeGen: 6
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -57,6 +57,30 @@
 #include "Cpu.h"
 
 /*lint -esym(765,PE_PeripheralUsed,LDD_SetClockConfiguration,PE_CpuClockConfigurations,PE_FillMemory) Disable MISRA rule (8.10) checking for symbols (PE_PeripheralUsed,LDD_SetClockConfiguration,PE_CpuClockConfigurations,PE_FillMemory). */
+
+/*
+** ===========================================================================
+** Array of initialized device structures of LDD components.
+** ===========================================================================
+*/
+LDD_TDeviceData *PE_LDD_DeviceDataList[16] = {
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL
+  };
 
 /*
 ** ===========================================================================
@@ -122,8 +146,29 @@ void PE_FillMemory(register void* SourceAddressPtr, register uint8_t c, register
 /* ===================================================================*/
 bool PE_PeripheralUsed(uint32_t PrphBaseAddress)
 {
-  (void)PrphBaseAddress;               /*!< Parameter is not used, suppress unused argument warning */
-  return FALSE;
+  bool result = FALSE;
+
+  switch (PrphBaseAddress) {
+    /* Base address allocated by peripheral(s) PTB */
+    case 0x400FF040UL:
+    /* Base address allocated by peripheral(s) PTD */
+    case 0x400FF0C0UL:
+    /* Base address allocated by peripheral(s) FTM0 */
+    case 0x40038000UL:
+    /* Base address allocated by peripheral(s) PTC */
+    case 0x400FF080UL:
+    /* Base address allocated by peripheral(s) UART0 */
+    case 0x4006A000UL:
+    /* Base address allocated by peripheral(s) FTM1 */
+    case 0x40039000UL:
+    /* Base address allocated by peripheral(s) ADC1 */
+    case 0x400BB000UL:
+      result = TRUE;
+      break;
+    default:
+      break;
+  }
+  return result;
 }
 
 /*

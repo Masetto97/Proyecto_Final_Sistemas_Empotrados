@@ -6,7 +6,7 @@
 **     Component   : PE_Types
 **     Version     : Driver 01.01
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 17:13, # CodeGen: 0
+**     Date/Time   : 2021-04-01, 17:54, # CodeGen: 6
 **     Abstract    :
 **         PE_Types.h - contains definitions of basic types,
 **         register access macros and hardware specific macros
@@ -199,6 +199,29 @@ typedef unsigned long int       uint32;
 #define PE_LDD_GetDeviceStructure(ComponentIndex) (PE_LDD_DeviceDataList[ComponentIndex])
 
 /*
+** ===========================================================================
+** LDD component ID specifying the component instance in the project. This ID
+** is used internally as an index to the array of LDD device structures.
+** ===========================================================================
+*/
+#define PE_LDD_COMPONENT_ExtIntLdd1_ID           0x00U
+#define PE_LDD_COMPONENT_ExtIntLdd2_ID           0x01U
+#define PE_LDD_COMPONENT_ExtIntLdd3_ID           0x02U
+#define PE_LDD_COMPONENT_BitIoLdd1_ID            0x03U
+#define PE_LDD_COMPONENT_BitIoLdd2_ID            0x04U
+#define PE_LDD_COMPONENT_BitIoLdd3_ID            0x05U
+#define PE_LDD_COMPONENT_BitIoLdd4_ID            0x06U
+#define PE_LDD_COMPONENT_TU1_ID                  0x07U
+#define PE_LDD_COMPONENT_PwmLdd1_ID              0x08U
+#define PE_LDD_COMPONENT_BitIoLdd5_ID            0x09U
+#define PE_LDD_COMPONENT_BitIoLdd6_ID            0x0AU
+#define PE_LDD_COMPONENT_BitIoLdd7_ID            0x0BU
+#define PE_LDD_COMPONENT_ASerialLdd1_ID          0x0CU
+#define PE_LDD_COMPONENT_TU2_ID                  0x0DU
+#define PE_LDD_COMPONENT_TimerIntLdd1_ID         0x0EU
+#define PE_LDD_COMPONENT_AdcLdd1_ID              0x0FU
+
+/*
 ** ===================================================================
 ** Global HAL types and constants
 ** ===================================================================
@@ -224,6 +247,8 @@ typedef enum {
 typedef uint16_t LDD_TDriverState;     /*!< Driver state type. */
 typedef void LDD_TCallbackParam;       /*!< Pointer to this type specifies the user data to be passed as a callback parameter. */
 typedef void (* LDD_TCallback)(LDD_TCallbackParam *CallbackParam); /*!< Callback type used for definition of callback functions. */
+
+extern LDD_TDeviceData *PE_LDD_DeviceDataList[]; /*!< Array of LDD component device structures */
 
 
 /* Fills a memory area block by a specified value. Function defined in PE_LDD.c */

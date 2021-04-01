@@ -53,28 +53,110 @@
   </PATHS>
   <FILES>
     <GeneratedCs>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/ASerialLdd1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/AdcLdd1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd2.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd3.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd4.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd5.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd6.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd7.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/CS1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Contador.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Cpu.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/DS1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Display.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/ExtIntLdd1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/ExtIntLdd2.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/ExtIntLdd3.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/LedD1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/LedD2.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/LedD3.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/LedD4.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/MCUC1.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PE_LDD.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Pins1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PuertoSerie.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PulsadorAjuste.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PulsadorHora.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PulsadorTemperatura.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PwmLdd1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/SHCP1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/STCP1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TU1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TU2.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Temperatura.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Tiempo.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TimerIntLdd1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/UTIL1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/WAIT1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/WAIT2.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Zumbador.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Project_Settings/Startup_Code/startup.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Sources/Events.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Sources/UART.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Sources/main.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Static_Code/System/CPU_Init.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Static_Code/System/Peripherals_Init.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Static_Code/System/Vectors.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/ASerialLdd1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/AdcLdd1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd2.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd3.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd4.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd5.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd6.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd7.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/CPU_Config.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/CS1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/CS1config.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Contador.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Cpu.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/DS1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Display.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/ExtIntLdd1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/ExtIntLdd2.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/ExtIntLdd3.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/IO_Map.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Init_Config.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/LedD1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/LedD2.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/LedD3.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/LedD4.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/MCUC1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/MCUC1config.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PE_Const.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PE_Error.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PE_LDD.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PE_Types.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Pins1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PuertoSerie.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PulsadorAjuste.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PulsadorHora.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PulsadorTemperatura.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/PwmLdd1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/SHCP1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/STCP1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TU1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TU2.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Temperatura.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Tiempo.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Tiempoconfig.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TimerIntLdd1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/UTIL1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/UTIL1config.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Vectors_Config.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/WAIT1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/WAIT1config.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/WAIT2.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/WAIT2config.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Zumbador.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Sources/Events.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Sources/UART.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Static_Code/IO_Map/MK64F12.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Static_Code/PDD/ADC_PDD.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Static_Code/PDD/CAN_PDD.h</PathName>

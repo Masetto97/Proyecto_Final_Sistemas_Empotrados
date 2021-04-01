@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K64P144M120SF5RM, Rev.2, January 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 17:13, # CodeGen: 0
+**     Date/Time   : 2021-04-01, 17:39, # CodeGen: 2
 **     Abstract    :
 **         This file collects Processor Expert components configuration 
 **         and interface files.
@@ -108,14 +108,10 @@
 **              Reset Pin                                  : RESET_b
 **            Debug interface (JTAG)                       : 
 **              JTAG Mode                                  : JTAG
-**                TDI                                      : Enabled
-**                  TDI Pin                                : PTA1/UART0_RX/FTM0_CH6/JTAG_TDI/EZP_DI
-**                TDO                                      : Enabled
-**                  TDO Pin                                : PTA2/UART0_TX/FTM0_CH7/JTAG_TDO/TRACE_SWO/EZP_DO
-**                TCK                                      : Enabled
-**                  TCK Pin                                : PTA0/UART0_CTS_b/UART0_COL_b/FTM0_CH5/JTAG_TCLK/SWD_CLK/EZP_CLK
-**                TMS                                      : Enabled
-**                  TMS Pin                                : PTA3/UART0_RTS_b/FTM0_CH0/JTAG_TMS/SWD_DIO
+**                TDI                                      : Disabled
+**                TDO                                      : Disabled
+**                TCK                                      : Disabled
+**                TMS                                      : Disabled
 **                nTRST                                    : Disabled
 **            Flash memory organization                    : 
 **              Flash blocks                               : 2
