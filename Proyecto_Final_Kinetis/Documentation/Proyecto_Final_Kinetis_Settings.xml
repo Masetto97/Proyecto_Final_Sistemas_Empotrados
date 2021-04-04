@@ -1003,7 +1003,7 @@ rising or falling edge
       <EmptySection_DummyValue />
     </Events>
   </Bean>
-  <Bean name="WAIT1" type="Wait">
+  <Bean name="WAIT1" type="WAIT">
     <Enabled v="Y" />
     <Properties>
       <Component_name v="WAIT1" />
@@ -1056,7 +1056,7 @@ rising or falling edge
         <Interrupt_TxD_priority v="medium priority" />
         <Interrupt_Error v="INT_UART0_ERR" />
         <Interrupt_Error_priority v="medium priority" />
-        <Input_buffer_size v="5" />
+        <Input_buffer_size v="4" />
         <Output_buffer_size v="100" />
         <group name="Handshake">
           <boolgroup name="CTS" v="Disabled" />
@@ -1761,7 +1761,7 @@ Autoselect
       </event>
     </Events>
   </Bean>
-  <Bean name="WAIT2" type="Wait">
+  <Bean name="WAIT2" type="WAIT">
     <Enabled v="Y" />
     <Properties>
       <Component_name v="WAIT2" />

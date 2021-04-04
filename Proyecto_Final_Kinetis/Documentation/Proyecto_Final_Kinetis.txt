@@ -115,7 +115,7 @@ Module "Display"   (component 74HC595)
    - Display_Deinit -Deinitializes the driver
    - Display_Init -Initializes the driver
 
-Module "WAIT1"     (component Wait)
+Module "WAIT1"     (component WAIT)
    - WAIT1_Wait10Cycles -Wait for 10 CPU cycles.
    - WAIT1_Wait100Cycles -Wait for 100 CPU cycles.
    - WAIT1_WaitCycles -Wait for a specified number of CPU cycles (16bit data type).
@@ -293,7 +293,7 @@ Module "Temperatura" (component ADC)
    - Temperatura_Calibrate -This method starts self calibration process. Calibration is typically used to remove the effects of 
                 the gain and offset from a specific reading.
 
-Module "WAIT2"     (component Wait)
+Module "WAIT2"     (component WAIT)
    - WAIT2_Wait10Cycles -Wait for 10 CPU cycles.
    - WAIT2_Wait100Cycles -Wait for 100 CPU cycles.
    - WAIT2_WaitCycles -Wait for a specified number of CPU cycles (16bit data type).

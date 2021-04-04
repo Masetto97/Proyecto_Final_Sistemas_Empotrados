@@ -89,6 +89,14 @@ int segundos = 0;
  */
 word valor_temperatura;
 /**
+ * variable con los valores enviados por el usuario por el puerto serie
+ */
+char *valor_usuario;
+/**
+ * variables para gestionar los valores recibidos/eviados por el puerto serie
+ */
+word env, rec;
+/**
  * Variable para indicar que se ha leido el valor de la temperatura
  * en la interrupción.
  */
@@ -101,11 +109,60 @@ bool valor_temperatura_disponible = FALSE;
  */
 int modo_funcionamiento = 0;
 /**
+ * variable para controlar los pasos en el modo configuración
+ * 	0.- preguntar hora
+ * 	1.- esperar respuesta
+ *  2.- preguntar alarma
+ * 	3.- esperar respuesta
+ */
+int modo_configuracion = 0;
+/**
  * variable para detectar la pulsación del S3A3 (modo configuración)
  * 	- es necesario detectar que mantiene pulsado el pulsador sin soltarlo
  */
 bool cambio_pulsador_s3a3 = FALSE;
+/**
+ * variables para gestionar la hora GenericTimeDate
+ * 	- hora del sistema
+ * 	- hora de la alarma
+ */
+TIMEREC hora;
+TIMEREC alarma;
 
+
+/**********************
+ * funciones globales *
+ **********************/
+// función para comprobar si la alarma y la hora del sistema coinciden
+bool comprobar_alarma () {
+	return (hora.Hour == alarma.Hour && hora.Min == alarma.Min);
+}
+
+void actualizar_hora_sistema(int valor) {
+	Tiempo_SetTime((int)valor / 100, (int)valor % 100, 0, 0);
+}
+
+void actualizar_alarma_sistema(int valor) {
+	alarma.Hour = ((int)valor / 100);
+	alarma.Min = ((int)valor % 100);
+}
+
+void activar_alarma() {
+	// TODO: parpadeo intermitente y zumbido intermitente (tarea?)
+//	Zumbador_Enable();
+	LedD1_PutVal(0);
+	LedD2_PutVal(0);
+	LedD3_PutVal(0);
+	LedD4_PutVal(0);
+}
+
+void desactivar_alarma() {
+//	Zumbador_Disable();
+	LedD1_PutVal(1);
+	LedD2_PutVal(1);
+	LedD3_PutVal(1);
+	LedD4_PutVal(1);
+}
 
 
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
@@ -114,22 +171,19 @@ int main(void)
 {
   /* Write your local variable definition here */
   // byte maps para los números del 0 al 9
-  const byte digito[] = {0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0X80,0X90};
+  const byte digito[] = {0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xF8, 0X80, 0X90};
   // byte maps para seleccionar los dígitos del display de la multifunction shield
-  const byte segmento[] = {0xF1,0xF2,0xF4,0xF8};
-  // variable para gestionar la hora GenericTimeDate
-  TIMEREC hora;
+  const byte segmento[] = {0xF1, 0xF2, 0xF4, 0xF8};
   // variables auxiliares para la hora
   int value_hora, value_minutos;
   // variable auxiliar para la temperatura
   float temp;
   // variable para saber que se ha detectado la pulsación de S3A3
-  bool activando_configuracion = FALSE;
-  // variable puerto serie
-  word env;
+  bool activando_configuracion = FALSE, alarma_activa = FALSE;
   // mensajes puerto serie
   char modo_ajuste_cabecera[] = "MODO AJUSTE HORA/ALARMA";
-  char modo_ajuste_hora[] = "Introduzca hora (HH:MM): ";
+  char modo_ajuste_cabecera_fin[] = "Se ha configurado la hora y la alarma correctamente";
+  char modo_ajuste_hora[] = "Introduzca hora en formato HH:MM: ";
   char modo_ajuste_alarma[] = "Introduzca la hora de la alarma (HH:MM): ";
 
   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
@@ -141,10 +195,30 @@ int main(void)
   Display_Enable();
   Display_Init();
   // deshabilitamos el zumbido
+  Zumbador_SetRatio16(0xFFFF);
   Zumbador_Disable();
+  // TODO: poner hora del sistema
+
+  // alarma por defecto
+  alarma.Hour = 6;
+  alarma.Min = 30;
 
   /* For example: for(;;) { } */
   for(;;) {
+	  // gestión de la alarma
+	  if (comprobar_alarma()) {
+	  	if (!alarma_activa) {
+	  		alarma_activa = TRUE;
+	  	}
+		activar_alarma();
+	  } else {
+		// solo desactivamos si previamente estaba activado
+	    if (alarma_activa) {
+	    	alarma_activa = FALSE;
+			desactivar_alarma();
+		}
+	  }
+
 	  // gestión de la hora
 	  if (modo_funcionamiento == 0) {
 		  // obtenemos la hora y la almacenamos en variables temporales
@@ -201,15 +275,46 @@ int main(void)
 	  if(activando_configuracion) {
 		  if (segundos == 2) {
 			  modo_funcionamiento = 2;
+			  valor_usuario = '\0';
 		  }
 	  }
 
 	  // gestión de la configuracion
 	  if (modo_funcionamiento == 2) {
-		  while(PuertoSerie_SendBlock(&modo_ajuste_cabecera, sizeof(modo_ajuste_cabecera), &env)!= ERR_OK) {}
-		  while(PuertoSerie_SendChar(10) != ERR_OK) {}
-		  while(PuertoSerie_SendChar(13) != ERR_OK) {}
-		  WAIT1_Waitms(500);
+		  if (modo_configuracion == 0) {
+			  while (PuertoSerie_SendBlock(&modo_ajuste_cabecera, sizeof(modo_ajuste_cabecera), &env) != ERR_OK){}
+			  while (PuertoSerie_SendChar(10) != ERR_OK){}
+			  while (PuertoSerie_SendChar(13) != ERR_OK){}
+			  while (PuertoSerie_SendBlock(&modo_ajuste_hora, sizeof(modo_ajuste_hora), &env) != ERR_OK){}
+			  modo_configuracion = 1; // esperando respuesta del usuario
+		  } else if (modo_configuracion == 1) {
+			  // comprobamos el valor leido por el usuario
+			  if (valor_usuario) {
+				  while (PuertoSerie_SendBlock(&valor_usuario, sizeof(valor_usuario), &env) != ERR_OK){}
+				  while (PuertoSerie_SendChar(10) != ERR_OK){}
+				  while (PuertoSerie_SendChar(13) != ERR_OK){}
+				  actualizar_hora_sistema(atoi(&valor_usuario));
+				  valor_usuario = '\0';
+				  modo_configuracion = 2; // preguntar por la alarma
+			  }
+		  } else if (modo_configuracion == 2) {
+			  while (PuertoSerie_SendBlock(&modo_ajuste_alarma, sizeof(modo_ajuste_alarma), &env) != ERR_OK){}
+			  modo_configuracion = 3; // esperando respuesta del usuario
+		  } else if (modo_configuracion == 3) {
+			  // comprobamos el valor leido por el usuario
+			  if (valor_usuario) {
+				  while (PuertoSerie_SendBlock(&valor_usuario, sizeof(valor_usuario), &env) != ERR_OK){}
+				  while (PuertoSerie_SendChar(10) != ERR_OK){}
+				  while (PuertoSerie_SendChar(13) != ERR_OK){}
+				  actualizar_alarma_sistema(atoi(&valor_usuario));
+				  valor_usuario = '\0';
+				  modo_configuracion = 4; // finalizar configuracion
+			  }
+		  } else if (modo_configuracion == 4) {
+			  while (PuertoSerie_SendBlock(&modo_ajuste_cabecera_fin, sizeof(modo_ajuste_cabecera_fin), &env) != ERR_OK){}
+			  modo_funcionamiento = 0;
+			  modo_configuracion = 0;
+		  }
 	  }
   }
 

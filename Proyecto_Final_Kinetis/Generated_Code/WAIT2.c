@@ -3,11 +3,11 @@
 **     Filename    : WAIT2.c
 **     Project     : Proyecto_Final_Kinetis
 **     Processor   : MK64FN1M0VLQ12
-**     Component   : Wait
+**     Component   : WAIT
 **     Version     : Component 01.082, Driver 01.00, CPU db: 3.00.000
 **     Repository  : My Components
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 18:11, # CodeGen: 7
+**     Date/Time   : 2021-04-04, 20:44, # CodeGen: 8
 **     Abstract    :
 **          Implements busy waiting routines.
 **     Settings    :
@@ -75,7 +75,7 @@
 
 /*
 ** ===================================================================
-**     Method      :  WAIT2_Wait10Cycles (component Wait)
+**     Method      :  WAIT2_Wait10Cycles (component WAIT)
 **     Description :
 **         Wait for 10 CPU cycles.
 **     Parameters  : None
@@ -100,7 +100,7 @@ __attribute__((naked, no_instrument_function)) void WAIT2_Wait10Cycles(void)
 
 /*
 ** ===================================================================
-**     Method      :  WAIT2_Wait100Cycles (component Wait)
+**     Method      :  WAIT2_Wait100Cycles (component WAIT)
 **     Description :
 **         Wait for 100 CPU cycles.
 **     Parameters  : None
@@ -138,7 +138,7 @@ __attribute__((naked, no_instrument_function)) void WAIT2_Wait100Cycles(void)
 
 /*
 ** ===================================================================
-**     Method      :  WAIT2_WaitCycles (component Wait)
+**     Method      :  WAIT2_WaitCycles (component WAIT)
 **     Description :
 **         Wait for a specified number of CPU cycles (16bit data type).
 **     Parameters  :
@@ -172,7 +172,7 @@ void WAIT2_WaitCycles(uint16_t cycles)
 
 /*
 ** ===================================================================
-**     Method      :  WAIT2_WaitLongCycles (component Wait)
+**     Method      :  WAIT2_WaitLongCycles (component WAIT)
 **     Description :
 **         Wait for a specified number of CPU cycles (32bit data type).
 **     Parameters  :
@@ -203,7 +203,7 @@ void WAIT2_WaitLongCycles(uint32_t cycles)
 
 /*
 ** ===================================================================
-**     Method      :  WAIT2_Waitms (component Wait)
+**     Method      :  WAIT2_Waitms (component WAIT)
 **     Description :
 **         Wait for a specified time in milliseconds.
 **     Parameters  :
@@ -228,7 +228,7 @@ void WAIT2_Waitms(uint16_t ms)
 }
 /*
 ** ===================================================================
-**     Method      :  WAIT2_Waitus (component Wait)
+**     Method      :  WAIT2_Waitus (component WAIT)
 **     Description :
 **         Wait for a specified time in microseconds.
 **     Parameters  :
@@ -241,7 +241,7 @@ void WAIT2_Waitms(uint16_t ms)
 /* implemented as macro version. See header file. */
 /*
 ** ===================================================================
-**     Method      :  WAIT2_Waitns (component Wait)
+**     Method      :  WAIT2_Waitns (component WAIT)
 **     Description :
 **         Wait for a specified time in nano seconds.
 **     Parameters  :
@@ -253,7 +253,7 @@ void WAIT2_Waitms(uint16_t ms)
 /* implemented as macro version. See header file. */
 /*
 ** ===================================================================
-**     Method      :  WAIT2_WaitOSms (component Wait)
+**     Method      :  WAIT2_WaitOSms (component WAIT)
 **     Description :
 **         If an RTOS is enabled, this routine will use a non-blocking
 **         wait method. Otherwise it will do a busy/blocking wait.
@@ -270,7 +270,7 @@ void WAIT2_WaitOSms(void)
 
 /*
 ** ===================================================================
-**     Method      :  WAIT2_Init (component Wait)
+**     Method      :  WAIT2_Init (component WAIT)
 **     Description :
 **         Driver initialization routine.
 **     Parameters  : None
@@ -289,7 +289,7 @@ void WAIT2_Init(void)
 
 /*
 ** ===================================================================
-**     Method      :  WAIT2_DeInit (component Wait)
+**     Method      :  WAIT2_DeInit (component WAIT)
 **     Description :
 **         Driver de-initialization routine
 **     Parameters  : None

@@ -7,7 +7,7 @@
 **     Version     : Component 02.611, Driver 01.01, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 17:54, # CodeGen: 6
+**     Date/Time   : 2021-04-04, 21:29, # CodeGen: 9
 **     Abstract    :
 **         This component "AsynchroSerial" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -25,7 +25,7 @@
 **            Interrupt TxD priority                       : medium priority
 **            Interrupt Error                              : INT_UART0_ERR
 **            Interrupt Error priority                     : medium priority
-**            Input buffer size                            : 5
+**            Input buffer size                            : 4
 **            Output buffer size                           : 100
 **            Handshake                                    : 
 **              CTS                                        : Disabled
@@ -149,7 +149,7 @@ extern "C" {
   typedef byte PuertoSerie_TComData;   /* User type for communication. Size of this type depends on the communication data witdh */
 #endif
 
-#define PuertoSerie_INP_BUF_SIZE  0x05U /* Length of the RX buffer */
+#define PuertoSerie_INP_BUF_SIZE  0x04U /* Length of the RX buffer */
 
 #define PuertoSerie_OUT_BUF_SIZE  0x64U /* Length of the TX buffer */
 

@@ -3,10 +3,10 @@
 **     Filename    : WAIT1.h
 **     Project     : Proyecto_Final_Kinetis
 **     Processor   : MK64FN1M0VLQ12
-**     Component   : Wait
+**     Component   : WAIT
 **     Version     : Component 01.082, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 17:43, # CodeGen: 3
+**     Date/Time   : 2021-04-04, 20:44, # CodeGen: 8
 **     Abstract    :
 **          Implements busy waiting routines.
 **     Settings    :
@@ -109,7 +109,7 @@ extern "C" {
 void WAIT1_Wait10Cycles(void);
 /*
 ** ===================================================================
-**     Method      :  WAIT1_Wait10Cycles (component Wait)
+**     Method      :  WAIT1_Wait10Cycles (component WAIT)
 **     Description :
 **         Wait for 10 CPU cycles.
 **     Parameters  : None
@@ -120,7 +120,7 @@ void WAIT1_Wait10Cycles(void);
 void WAIT1_Wait100Cycles(void);
 /*
 ** ===================================================================
-**     Method      :  WAIT1_Wait100Cycles (component Wait)
+**     Method      :  WAIT1_Wait100Cycles (component WAIT)
 **     Description :
 **         Wait for 100 CPU cycles.
 **     Parameters  : None
@@ -131,7 +131,7 @@ void WAIT1_Wait100Cycles(void);
 void WAIT1_WaitCycles(uint16_t cycles);
 /*
 ** ===================================================================
-**     Method      :  WAIT1_WaitCycles (component Wait)
+**     Method      :  WAIT1_WaitCycles (component WAIT)
 **     Description :
 **         Wait for a specified number of CPU cycles (16bit data type).
 **     Parameters  :
@@ -144,7 +144,7 @@ void WAIT1_WaitCycles(uint16_t cycles);
 void WAIT1_Waitms(uint16_t ms);
 /*
 ** ===================================================================
-**     Method      :  WAIT1_Waitms (component Wait)
+**     Method      :  WAIT1_Waitms (component WAIT)
 **     Description :
 **         Wait for a specified time in milliseconds.
 **     Parameters  :
@@ -167,7 +167,7 @@ void WAIT1_Waitms(uint16_t ms);
        )
 /*
 ** ===================================================================
-**     Method      :  WAIT1_Waitus (component Wait)
+**     Method      :  WAIT1_Waitus (component WAIT)
 **     Description :
 **         Wait for a specified time in microseconds.
 **     Parameters  :
@@ -191,7 +191,7 @@ void WAIT1_Waitms(uint16_t ms);
        )
 /*
 ** ===================================================================
-**     Method      :  WAIT1_Waitns (component Wait)
+**     Method      :  WAIT1_Waitns (component WAIT)
 **     Description :
 **         Wait for a specified time in nano seconds.
 **     Parameters  :
@@ -208,7 +208,7 @@ void WAIT1_Waitms(uint16_t ms);
 #endif
 /*
 ** ===================================================================
-**     Method      :  WAIT1_WaitOSms (component Wait)
+**     Method      :  WAIT1_WaitOSms (component WAIT)
 **     Description :
 **         If an RTOS is enabled, this routine will use a non-blocking
 **         wait method. Otherwise it will do a busy/blocking wait.
@@ -220,7 +220,7 @@ void WAIT1_Waitms(uint16_t ms);
 void WAIT1_WaitLongCycles(uint32_t cycles);
 /*
 ** ===================================================================
-**     Method      :  WAIT1_WaitLongCycles (component Wait)
+**     Method      :  WAIT1_WaitLongCycles (component WAIT)
 **     Description :
 **         Wait for a specified number of CPU cycles (32bit data type).
 **     Parameters  :
@@ -233,7 +233,7 @@ void WAIT1_WaitLongCycles(uint32_t cycles);
 void WAIT1_Init(void);
 /*
 ** ===================================================================
-**     Method      :  WAIT1_Init (component Wait)
+**     Method      :  WAIT1_Init (component WAIT)
 **     Description :
 **         Driver initialization routine.
 **     Parameters  : None
@@ -244,7 +244,7 @@ void WAIT1_Init(void);
 void WAIT1_DeInit(void);
 /*
 ** ===================================================================
-**     Method      :  WAIT1_DeInit (component Wait)
+**     Method      :  WAIT1_DeInit (component WAIT)
 **     Description :
 **         Driver de-initialization routine
 **     Parameters  : None

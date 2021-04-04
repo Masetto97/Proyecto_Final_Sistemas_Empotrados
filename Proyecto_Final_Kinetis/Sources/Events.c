@@ -182,9 +182,16 @@ void PuertoSerie_OnTxChar(void)
 **     Returns     : Nothing
 ** ===================================================================
 */
+extern char *valor_usuario;
+extern word rec;
 void PuertoSerie_OnFullRxBuf(void)
 {
-  /* Write your code here ... */
+    /* Write your code here ... */
+	char *aux; // variable auxiliar de lectura para comprobar errores
+	if(PuertoSerie_RecvBlock(&aux, sizeof(aux), &rec) == ERR_OK) {
+		// en caso de no haber ningún error, lo guardamos en la variable compartida
+		valor_usuario = aux;
+	}
 }
 
 /*

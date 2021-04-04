@@ -1003,7 +1003,7 @@ rising or falling edge
       <EmptySection_DummyValue />
     </Events>
   </Bean>
-  <Bean name="WAIT1" type="Wait">
+  <Bean name="WAIT1" type="WAIT">
     <Enabled v="Y" />
     <Properties>
       <Component_name v="WAIT1" />
@@ -1759,6 +1759,33 @@ Autoselect
         <Event_procedure_name v="Temperatura_OnCalibrationEnd" />
         <Priority v="same as interrupt" />
       </event>
+    </Events>
+  </Bean>
+  <Bean name="WAIT2" type="WAIT">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="WAIT2" />
+      <SDK v="MCUC1" />
+      <boolgroup name="Use Cycle Counter" v="Disabled" />
+      <boolgroup name="Manual Clock Values" v="Disabled" />
+      <Delay100usFunction v="Delay100US" />
+      <boolgroup name="RTOS" v="Disabled" />
+      <boolgroup name="Watchdog" v="Disabled" />
+    </Properties>
+    <Methods>
+      <Wait10Cycles v="generate code" />
+      <Wait100Cycles v="generate code" />
+      <WaitCycles v="generate code" />
+      <WaitLongCycles v="generate code" />
+      <Waitms v="generate code" />
+      <Waitus v="generate code" />
+      <Waitns v="generate code" />
+      <WaitOSms v="generate code" />
+      <Init v="generate code" />
+      <DeInit v="generate code" />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
     </Events>
   </Bean>
 </PE_PROJECT_SETTINGS_DOCUMENTATION>
