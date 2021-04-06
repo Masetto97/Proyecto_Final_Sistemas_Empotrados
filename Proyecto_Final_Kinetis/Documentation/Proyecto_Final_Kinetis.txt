@@ -103,31 +103,6 @@ Module "Zumbador"  (component PWM)
                 16-bit unsigned integer number. The method is available only if it is not selected list of predefined values in 
                 <Starting pulse width> property.
 
-Module "Display"   (component 74HC595)
-   - Display_Enable -Enables the device
-   - Display_Disable -Disables the device
-   - Display_ShiftByte -Shift a byte to the shift register. The most significant bit will be on output pin 0. Use Latch() to 
-                show the data on the output pins.
-   - Display_Latch -Sends a latch pulse to move the bits from the internal memory to the output pins.
-   - Display_ReadByte -Returns the current value of the shift register. The current value of the shift register is cached in 
-                the driver.
-   - Display_WriteByte -Shifts the given byte and latches it.
-   - Display_Deinit -Deinitializes the driver
-   - Display_Init -Initializes the driver
-
-Module "WAIT1"     (component WAIT)
-   - WAIT1_Wait10Cycles -Wait for 10 CPU cycles.
-   - WAIT1_Wait100Cycles -Wait for 100 CPU cycles.
-   - WAIT1_WaitCycles -Wait for a specified number of CPU cycles (16bit data type).
-   - WAIT1_WaitLongCycles -Wait for a specified number of CPU cycles (32bit data type).
-   - WAIT1_Waitms -Wait for a specified time in milliseconds.
-   - WAIT1_Waitus -Wait for a specified time in microseconds.
-   - WAIT1_Waitns -Wait for a specified time in nano seconds.
-   - WAIT1_WaitOSms -If an RTOS is enabled, this routine will use a non-blocking wait method. Otherwise it will do a 
-                busy/blocking wait.
-   - WAIT1_Init -Driver initialization routine.
-   - WAIT1_DeInit -Driver de-initialization routine
-
 Module "MCUC1"     (component McuLibConfig)
 
 Module "PuertoSerie" (component AsynchroSerial)
@@ -293,18 +268,30 @@ Module "Temperatura" (component ADC)
    - Temperatura_Calibrate -This method starts self calibration process. Calibration is typically used to remove the effects of 
                 the gain and offset from a specific reading.
 
-Module "WAIT2"     (component WAIT)
-   - WAIT2_Wait10Cycles -Wait for 10 CPU cycles.
-   - WAIT2_Wait100Cycles -Wait for 100 CPU cycles.
-   - WAIT2_WaitCycles -Wait for a specified number of CPU cycles (16bit data type).
-   - WAIT2_WaitLongCycles -Wait for a specified number of CPU cycles (32bit data type).
-   - WAIT2_Waitms -Wait for a specified time in milliseconds.
-   - WAIT2_Waitus -Wait for a specified time in microseconds.
-   - WAIT2_Waitns -Wait for a specified time in nano seconds.
-   - WAIT2_WaitOSms -If an RTOS is enabled, this routine will use a non-blocking wait method. Otherwise it will do a 
+Module "Display"   (component 74HC595)
+   - Display_Enable -Enables the device
+   - Display_Disable -Disables the device
+   - Display_ShiftByte -Shift a byte to the shift register. The most significant bit will be on output pin 0. Use Latch() to 
+                show the data on the output pins.
+   - Display_Latch -Sends a latch pulse to move the bits from the internal memory to the output pins.
+   - Display_ReadByte -Returns the current value of the shift register. The current value of the shift register is cached in 
+                the driver.
+   - Display_WriteByte -Shifts the given byte and latches it.
+   - Display_Deinit -Deinitializes the driver
+   - Display_Init -Initializes the driver
+
+Module "WAIT1"     (component WAIT)
+   - WAIT1_Wait10Cycles -Wait for 10 CPU cycles.
+   - WAIT1_Wait100Cycles -Wait for 100 CPU cycles.
+   - WAIT1_WaitCycles -Wait for a specified number of CPU cycles (16bit data type).
+   - WAIT1_WaitLongCycles -Wait for a specified number of CPU cycles (32bit data type).
+   - WAIT1_Waitms -Wait for a specified time in milliseconds.
+   - WAIT1_Waitus -Wait for a specified time in microseconds.
+   - WAIT1_Waitns -Wait for a specified time in nano seconds.
+   - WAIT1_WaitOSms -If an RTOS is enabled, this routine will use a non-blocking wait method. Otherwise it will do a 
                 busy/blocking wait.
-   - WAIT2_Init -Driver initialization routine.
-   - WAIT2_DeInit -Driver de-initialization routine
+   - WAIT1_Init -Driver initialization routine.
+   - WAIT1_DeInit -Driver de-initialization routine
 
 Module "Cpu"       (component MK64FN1M0LQ12)
 

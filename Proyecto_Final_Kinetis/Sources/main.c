@@ -67,7 +67,6 @@
 #include "TU2.h"
 #include "Temperatura.h"
 #include "AdcLdd1.h"
-#include "WAIT2.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"

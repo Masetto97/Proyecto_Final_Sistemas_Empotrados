@@ -70,7 +70,6 @@
 #include "TU2.h"
 #include "Temperatura.h"
 #include "AdcLdd1.h"
-#include "WAIT2.h"
 
 #ifdef __cplusplus
 extern "C" {

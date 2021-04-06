@@ -35,13 +35,13 @@
 - \subpage BitIoLdd4
 - \subpage TU1
 - \subpage PwmLdd1
-- \subpage BitIoLdd5
-- \subpage BitIoLdd6
-- \subpage BitIoLdd7
 - \subpage ASerialLdd1
 - \subpage TU2
 - \subpage TimerIntLdd1
 - \subpage AdcLdd1
+- \subpage BitIoLdd5
+- \subpage BitIoLdd6
+- \subpage BitIoLdd7
 
 */
 
@@ -83,13 +83,13 @@
 - \subpage BitIoLdd4
 - \subpage TU1
 - \subpage PwmLdd1
-- \subpage BitIoLdd5
-- \subpage BitIoLdd6
-- \subpage BitIoLdd7
 - \subpage ASerialLdd1
 - \subpage TU2
 - \subpage TimerIntLdd1
 - \subpage AdcLdd1
+- \subpage BitIoLdd5
+- \subpage BitIoLdd6
+- \subpage BitIoLdd7
 
 */
 

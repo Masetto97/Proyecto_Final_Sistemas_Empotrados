@@ -6,7 +6,7 @@
 **     Version     : Component 01.046, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 18:11, # CodeGen: 7
+**     Date/Time   : 2021-04-06, 14:41, # CodeGen: 13
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -73,14 +73,6 @@
 #include "TU1.h"
 #include "Zumbador.h"
 #include "PwmLdd1.h"
-#include "Display.h"
-#include "STCP1.h"
-#include "BitIoLdd5.h"
-#include "DS1.h"
-#include "BitIoLdd6.h"
-#include "SHCP1.h"
-#include "BitIoLdd7.h"
-#include "WAIT1.h"
 #include "MCUC1.h"
 #include "PuertoSerie.h"
 #include "ASerialLdd1.h"
@@ -92,7 +84,14 @@
 #include "TU2.h"
 #include "Temperatura.h"
 #include "AdcLdd1.h"
-#include "WAIT2.h"
+#include "Display.h"
+#include "STCP1.h"
+#include "BitIoLdd5.h"
+#include "DS1.h"
+#include "BitIoLdd6.h"
+#include "SHCP1.h"
+#include "BitIoLdd7.h"
+#include "WAIT1.h"
 
 
 /*

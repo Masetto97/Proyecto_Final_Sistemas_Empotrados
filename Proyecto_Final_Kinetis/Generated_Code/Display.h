@@ -6,7 +6,7 @@
 **     Component   : 74HC595
 **     Version     : Component 01.022, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 17:54, # CodeGen: 6
+**     Date/Time   : 2021-04-06, 14:43, # CodeGen: 14
 **     Abstract    :
 **
 Driver for the 74HC595 8bit serial shift register.

@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K64P144M120SF5RM, Rev.2, January 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 18:11, # CodeGen: 7
+**     Date/Time   : 2021-04-06, 14:41, # CodeGen: 13
 **     Abstract    :
 **
 **     Settings    :
@@ -123,15 +123,6 @@ void Components_Init(void)
   /* ### PWM_LDD "PwmLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)PwmLdd1_Init(NULL);
   /* ### McuLibConfig "MCUC1" init code ... */
-  WAIT1_Init();
-  /* ### BitIO_LDD "BitIoLdd5" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
-  (void)BitIoLdd5_Init(NULL);
-  /* ### BitIO_LDD "BitIoLdd6" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
-  (void)BitIoLdd6_Init(NULL);
-  /* ### BitIO_LDD "BitIoLdd7" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
-  (void)BitIoLdd7_Init(NULL);
-  /* ### 74HC595 "Display" init code ... */
-  Display_Init();
   /* ### Asynchro serial "PuertoSerie" init code ... */
   PuertoSerie_Init();
   /* ### CriticalSection "CS1" init code ... */
@@ -144,7 +135,15 @@ void Components_Init(void)
   /* ### TimerInt "Contador" init code ... */
   /* ### ADC "Temperatura" init code ... */
   Temperatura_Init();
-  WAIT2_Init();
+  WAIT1_Init();
+  /* ### BitIO_LDD "BitIoLdd5" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd5_Init(NULL);
+  /* ### BitIO_LDD "BitIoLdd6" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd6_Init(NULL);
+  /* ### BitIO_LDD "BitIoLdd7" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd7_Init(NULL);
+  /* ### 74HC595 "Display" init code ... */
+  Display_Init();
 }
 #endif /* CPU_COMPONENTS_INIT */
 

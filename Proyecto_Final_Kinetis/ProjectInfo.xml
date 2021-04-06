@@ -91,7 +91,6 @@
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TimerIntLdd1.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/UTIL1.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/WAIT1.c</PathName>
-      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/WAIT2.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Zumbador.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Project_Settings/Startup_Code/startup.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Sources/Events.c</PathName>
@@ -152,8 +151,6 @@
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Vectors_Config.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/WAIT1.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/WAIT1config.h</PathName>
-      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/WAIT2.h</PathName>
-      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/WAIT2config.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Zumbador.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Sources/Events.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Sources/UART.h</PathName>
