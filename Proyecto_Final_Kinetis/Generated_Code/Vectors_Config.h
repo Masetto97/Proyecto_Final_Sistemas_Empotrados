@@ -86,6 +86,9 @@
 #include "SHCP1.h"
 #include "BitIoLdd7.h"
 #include "WAIT1.h"
+#include "ContadorAlarma.h"
+#include "TimerIntLdd2.h"
+#include "TU3.h"
 #include "Events.h"
 
 #ifdef __cplusplus
@@ -155,7 +158,7 @@ extern "C" {
 #define VECTOR_57         (tIsrFunc)&UnhandledInterrupt         /* 0x39 -    ivINT_CMP1                     unused by PE */
 #define VECTOR_58         (tIsrFunc)&UnhandledInterrupt         /* 0x3A -    ivINT_FTM0                     unused by PE */
 #define VECTOR_59         (tIsrFunc)&TU2_Interrupt              /* 0x3B 112  ivINT_FTM1                     used by PE */
-#define VECTOR_60         (tIsrFunc)&UnhandledInterrupt         /* 0x3C -    ivINT_FTM2                     unused by PE */
+#define VECTOR_60         (tIsrFunc)&TU3_Interrupt              /* 0x3C 112  ivINT_FTM2                     used by PE */
 #define VECTOR_61         (tIsrFunc)&UnhandledInterrupt         /* 0x3D -    ivINT_CMT                      unused by PE */
 #define VECTOR_62         (tIsrFunc)&UnhandledInterrupt         /* 0x3E -    ivINT_RTC                      unused by PE */
 #define VECTOR_63         (tIsrFunc)&UnhandledInterrupt         /* 0x3F -    ivINT_RTC_Seconds              unused by PE */

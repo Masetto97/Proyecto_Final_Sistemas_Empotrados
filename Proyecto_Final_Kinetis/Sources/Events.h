@@ -59,6 +59,9 @@
 #include "SHCP1.h"
 #include "BitIoLdd7.h"
 #include "WAIT1.h"
+#include "ContadorAlarma.h"
+#include "TimerIntLdd2.h"
+#include "TU3.h"
 #include "MCUC1.h"
 #include "PuertoSerie.h"
 #include "ASerialLdd1.h"
@@ -256,6 +259,22 @@ void Temperatura_OnCalibrationEnd(void);
 **     Returns     : Nothing
 ** ===================================================================
 */
+
+/*
+** ===================================================================
+**     Event       :  ContadorAlarma_OnInterrupt (module Events)
+**
+**     Component   :  ContadorAlarma [TimerInt]
+**     Description :
+**         When a timer interrupt occurs this event is called (only
+**         when the component is enabled - <Enable> and the events are
+**         enabled - <EnableEvent>). This event is enabled only if a
+**         <interrupt service/event> is enabled.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void ContadorAlarma_OnInterrupt(void);
 
 /* END Events */
 

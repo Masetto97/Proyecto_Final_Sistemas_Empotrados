@@ -7,7 +7,7 @@
 **     Version     : Component 02.241, Driver 01.01, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-01, 17:54, # CodeGen: 6
+**     Date/Time   : 2021-04-06, 14:57, # CodeGen: 16
 **     Abstract    :
 **         This component implements a pulse-width modulation generator
 **         that generates signal with variable duty and fixed cycle. 
@@ -33,6 +33,7 @@
 **          Referenced components                          : 
 **            PWM_LDD                                      : PWM_LDD
 **     Contents    :
+**         Enable     - byte Zumbador_Enable(void);
 **         Disable    - byte Zumbador_Disable(void);
 **         SetRatio16 - byte Zumbador_SetRatio16(word Ratio);
 **         SetDutyUS  - byte Zumbador_SetDutyUS(word Time);
@@ -88,6 +89,26 @@
 #ifdef __cplusplus
 extern "C" {
 #endif 
+
+/*
+** ===================================================================
+**     Method      :  Zumbador_Enable (component PWM)
+**     Description :
+**         This method enables the component - it starts the signal
+**         generation. Events may be generated (<DisableEvent>
+**         /<EnableEvent>).
+**     Parameters  : None
+**     Returns     :
+**         ---             - Error code, possible codes:
+**                           ERR_OK - OK
+**                           ERR_SPEED - This device does not work in
+**                           the active speed mode
+** ===================================================================
+*/
+/*
+byte Zumbador_Enable(void)
+**  This method is implemented as a macro. See Zumbador.h file.  **
+*/
 
 /*
 ** ===================================================================

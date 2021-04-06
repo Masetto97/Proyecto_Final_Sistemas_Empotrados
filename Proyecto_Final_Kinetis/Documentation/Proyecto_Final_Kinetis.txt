@@ -73,6 +73,8 @@ Module "TU1"       (component TimerUnit_LDD)
                 "yes" value then the device is also enabled (see the description of the <Enable> method). In this case the 
                 <Enable> method is not necessary and needn't to be generated. This method can be called only once. Before the 
                 second call of Init the <Deinit> must be called first.
+   - TU1_Enable -Enables the component - it starts the signal generation. Events may be generated (see SetEventMask). The 
+                method is not available if the counter can't be disabled/enabled by HW.
    - TU1_Disable -Disables the component - it stops signal generation and events calling. The method is not available if the 
                 counter can't be disabled/enabled by HW.
    - TU1_GetPeriodTicks -Returns the number of counter ticks before re-initialization. See also method <SetPeriodTicks>. This 
@@ -90,6 +92,8 @@ Module "TU1"       (component TimerUnit_LDD)
                 available when at least one channel is configured.
 
 Module "Zumbador"  (component PWM)
+   - Zumbador_Enable -This method enables the component - it starts the signal generation. Events may be generated 
+                (<DisableEvent>/<EnableEvent>).
    - Zumbador_Disable -This method disables the component - it stops the signal generation and events calling. When the timer 
                 is disabled, it is possible to call <ClrValue> and <SetValue> methods.
    - Zumbador_SetRatio16 -This method sets a new duty-cycle ratio. Ratio is expressed as a 16-bit unsigned integer number. 0 - 
@@ -292,6 +296,15 @@ Module "WAIT1"     (component WAIT)
                 busy/blocking wait.
    - WAIT1_Init -Driver initialization routine.
    - WAIT1_DeInit -Driver de-initialization routine
+
+Module "ContadorAlarma" (component TimerInt)
+
+Module "TU3"       (component TimerUnit_LDD)
+   - TU3_Init -Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets 
+                interrupt priority, sets pin routing, sets timing, etc. If the property <"Enable in init. code"> is set to 
+                "yes" value then the device is also enabled (see the description of the <Enable> method). In this case the 
+                <Enable> method is not necessary and needn't to be generated. This method can be called only once. Before the 
+                second call of Init the <Deinit> must be called first.
 
 Module "Cpu"       (component MK64FN1M0LQ12)
 

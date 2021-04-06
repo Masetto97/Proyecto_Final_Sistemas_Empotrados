@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K64P144M120SF5RM, Rev.2, January 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-06, 14:41, # CodeGen: 13
+**     Date/Time   : 2021-04-06, 14:53, # CodeGen: 15
 **     Abstract    :
 **
 **     Settings    :
@@ -144,6 +144,9 @@ void Components_Init(void)
   (void)BitIoLdd7_Init(NULL);
   /* ### 74HC595 "Display" init code ... */
   Display_Init();
+  /* ### TimerInt_LDD "TimerIntLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)TimerIntLdd2_Init(NULL);
+  /* ### TimerInt "ContadorAlarma" init code ... */
 }
 #endif /* CPU_COMPONENTS_INIT */
 

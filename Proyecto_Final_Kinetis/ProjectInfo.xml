@@ -64,6 +64,7 @@
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd7.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/CS1.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Contador.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/ContadorAlarma.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Cpu.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/DS1.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Display.c</PathName>
@@ -86,9 +87,11 @@
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/STCP1.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TU1.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TU2.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TU3.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Temperatura.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Tiempo.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TimerIntLdd1.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TimerIntLdd2.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/UTIL1.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/WAIT1.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Zumbador.c</PathName>
@@ -114,6 +117,7 @@
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/CS1.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/CS1config.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Contador.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/ContadorAlarma.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Cpu.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/DS1.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Display.h</PathName>
@@ -142,10 +146,12 @@
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/STCP1.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TU1.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TU2.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TU3.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Temperatura.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Tiempo.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Tiempoconfig.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TimerIntLdd1.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/TimerIntLdd2.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/UTIL1.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/UTIL1config.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Vectors_Config.h</PathName>

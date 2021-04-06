@@ -6,7 +6,7 @@
 **     Version     : Component 01.046, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2021-04-06, 14:41, # CodeGen: 13
+**     Date/Time   : 2021-04-06, 14:53, # CodeGen: 15
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -92,6 +92,9 @@
 #include "SHCP1.h"
 #include "BitIoLdd7.h"
 #include "WAIT1.h"
+#include "ContadorAlarma.h"
+#include "TimerIntLdd2.h"
+#include "TU3.h"
 
 
 /*

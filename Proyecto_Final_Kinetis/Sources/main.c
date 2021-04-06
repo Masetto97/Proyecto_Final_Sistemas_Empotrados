@@ -56,6 +56,9 @@
 #include "SHCP1.h"
 #include "BitIoLdd7.h"
 #include "WAIT1.h"
+#include "ContadorAlarma.h"
+#include "TimerIntLdd2.h"
+#include "TU3.h"
 #include "MCUC1.h"
 #include "PuertoSerie.h"
 #include "ASerialLdd1.h"
@@ -83,6 +86,10 @@
  * variable para contabilizar segundos (necesario para el cambio de modo)
  */
 int segundos = 0;
+/**
+ * variables para contabilizar los ciclos cuando está activada la alarma
+ */
+int contador_alarma = 0;
 /**
  * variable con el valor leido de la temperatura
  */
@@ -137,26 +144,34 @@ bool comprobar_alarma () {
 	return (hora.Hour == alarma.Hour && hora.Min == alarma.Min);
 }
 
-void actualizar_hora_sistema(int valor) {
-	Tiempo_SetTime((int)valor / 100, (int)valor % 100, 0, 0);
+// función que permite actualizar la hora del sistema
+void actualizar_hora_sistema(int horas, int minutos) {
+	Tiempo_SetTime(horas, minutos, 0, 0);
 }
 
-void actualizar_alarma_sistema(int valor) {
-	alarma.Hour = ((int)valor / 100);
-	alarma.Min = ((int)valor % 100);
+// función que permite actualizar la hora de la alarma
+void actualizar_alarma_sistema(int horas, int minutos) {
+	alarma.Hour = horas;
+	alarma.Min = minutos;
 }
 
-void activar_alarma() {
-	// TODO: parpadeo intermitente y zumbido intermitente (tarea?)
-//	Zumbador_Enable();
-	LedD1_PutVal(0);
-	LedD2_PutVal(0);
-	LedD3_PutVal(0);
-	LedD4_PutVal(0);
+// función para gestionar las acciones durante la alarma
+void sonar_alarma() {
+	contador_alarma %= 3;
+	if (contador_alarma % 2 == 0) {
+		Zumbador_Enable();
+		LedD1_PutVal(0);
+		LedD2_PutVal(0);
+		LedD3_PutVal(0);
+		LedD4_PutVal(0);
+	} else {
+		desactivar_alarma();
+	}
 }
 
+// función que permite desactivar las acciones de la alarma
 void desactivar_alarma() {
-//	Zumbador_Disable();
+	Zumbador_Disable();
 	LedD1_PutVal(1);
 	LedD2_PutVal(1);
 	LedD3_PutVal(1);
@@ -174,7 +189,7 @@ int main(void)
   // byte maps para seleccionar los dígitos del display de la multifunction shield
   const byte segmento[] = {0xF1, 0xF2, 0xF4, 0xF8};
   // variables auxiliares para la hora
-  int value_hora, value_minutos;
+  int value_hora, value_minutos, valor_hora_aux;
   // variable auxiliar para la temperatura
   float temp;
   // variable para saber que se ha detectado la pulsación de S3A3
@@ -208,8 +223,9 @@ int main(void)
 	  if (comprobar_alarma()) {
 	  	if (!alarma_activa) {
 	  		alarma_activa = TRUE;
+	  		contador_alarma = 0;
 	  	}
-		activar_alarma();
+	  	sonar_alarma();
 	  } else {
 		// solo desactivamos si previamente estaba activado
 	    if (alarma_activa) {
@@ -292,7 +308,8 @@ int main(void)
 				  while (PuertoSerie_SendBlock(&valor_usuario, sizeof(valor_usuario), &env) != ERR_OK){}
 				  while (PuertoSerie_SendChar(10) != ERR_OK){}
 				  while (PuertoSerie_SendChar(13) != ERR_OK){}
-				  actualizar_hora_sistema(atoi(&valor_usuario));
+				  valor_hora_aux = atoi(&valor_usuario);
+				  actualizar_hora_sistema(valor_hora_aux / 100, valor_hora_aux % 100);
 				  valor_usuario = '\0';
 				  modo_configuracion = 2; // preguntar por la alarma
 			  }
@@ -305,7 +322,8 @@ int main(void)
 				  while (PuertoSerie_SendBlock(&valor_usuario, sizeof(valor_usuario), &env) != ERR_OK){}
 				  while (PuertoSerie_SendChar(10) != ERR_OK){}
 				  while (PuertoSerie_SendChar(13) != ERR_OK){}
-				  actualizar_alarma_sistema(atoi(&valor_usuario));
+				  valor_hora_aux = atoi(&valor_usuario);
+				  actualizar_alarma_sistema(valor_hora_aux / 100, valor_hora_aux % 100);
 				  valor_usuario = '\0';
 				  modo_configuracion = 4; // finalizar configuracion
 			  }

@@ -277,6 +277,27 @@ void Temperatura_OnCalibrationEnd(void)
   /* Write your code here ... */
 }
 
+/*
+** ===================================================================
+**     Event       :  ContadorAlarma_OnInterrupt (module Events)
+**
+**     Component   :  ContadorAlarma [TimerInt]
+**     Description :
+**         When a timer interrupt occurs this event is called (only
+**         when the component is enabled - <Enable> and the events are
+**         enabled - <EnableEvent>). This event is enabled only if a
+**         <interrupt service/event> is enabled.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+extern int contador_alarma;
+void ContadorAlarma_OnInterrupt(void)
+{
+  /* Write your code here ... */
+  contador_alarma ++;
+}
+
 /* END Events */
 
 #ifdef __cplusplus
