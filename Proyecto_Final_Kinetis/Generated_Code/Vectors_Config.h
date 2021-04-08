@@ -86,7 +86,7 @@
 #include "SHCP1.h"
 #include "BitIoLdd7.h"
 #include "WAIT1.h"
-#include "ContadorAlarma.h"
+#include "Contador250ms.h"
 #include "TimerIntLdd2.h"
 #include "TU3.h"
 #include "Events.h"

@@ -297,7 +297,7 @@ Module "WAIT1"     (component WAIT)
    - WAIT1_Init -Driver initialization routine.
    - WAIT1_DeInit -Driver de-initialization routine
 
-Module "ContadorAlarma" (component TimerInt)
+Module "Contador250ms" (component TimerInt)
 
 Module "TU3"       (component TimerUnit_LDD)
    - TU3_Init -Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets 

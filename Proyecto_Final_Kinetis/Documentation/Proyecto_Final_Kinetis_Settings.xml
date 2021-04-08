@@ -814,7 +814,7 @@ rising or falling edge
         <Interrupt_TxD_priority v="medium priority" />
         <Interrupt_Error v="INT_UART0_ERR" />
         <Interrupt_Error_priority v="medium priority" />
-        <Input_buffer_size v="4" />
+        <Input_buffer_size v="5" />
         <Output_buffer_size v="100" />
         <group name="Handshake">
           <boolgroup name="CTS" v="Disabled" />
@@ -1761,10 +1761,10 @@ Autoselect
       <EmptySection_DummyValue />
     </Events>
   </Bean>
-  <Bean name="ContadorAlarma" type="TimerInt">
+  <Bean name="Contador250ms" type="TimerInt">
     <Enabled v="Y" />
     <Properties>
-      <Component_name v="ContadorAlarma" />
+      <Component_name v="Contador250ms" />
       <Periodic_interrupt_source v="FTM2_MOD" />
       <Counter v="FTM2_CNT" />
       <boolgroup name="Interrupt service/event" v="Enabled">
@@ -1854,7 +1854,7 @@ Autoselect
       <event name="BeforeNewSpeed" v="don&amp;apos;t generate code" />
       <event name="AfterNewSpeed" v="don&amp;apos;t generate code" />
       <event name="OnInterrupt" v="generate code">
-        <Event_procedure_name v="ContadorAlarma_OnInterrupt" />
+        <Event_procedure_name v="Contador250ms_OnInterrupt" />
         <Priority v="same as interrupt" />
       </event>
     </Events>

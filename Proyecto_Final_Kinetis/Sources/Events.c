@@ -69,11 +69,13 @@ void Cpu_OnNMI(void)
 ** ===================================================================
 */
 extern int modo_funcionamiento;
-extern bool cambio_pulsador_s3a3;
+extern bool estado_pulsador_ajuste;
+extern bool cambio_estado_pulsador_ajuste;
 void PulsadorAjuste_OnInterrupt(void)
 {
   /* Write your code here ... */
-  cambio_pulsador_s3a3 = TRUE;
+	cambio_estado_pulsador_ajuste = TRUE;
+	estado_pulsador_ajuste = !estado_pulsador_ajuste;
 
 }
 
@@ -182,15 +184,17 @@ void PuertoSerie_OnTxChar(void)
 **     Returns     : Nothing
 ** ===================================================================
 */
-extern char *valor_usuario;
+extern char valor_usuario[5];
+extern bool valor_leido;
 extern word rec;
 void PuertoSerie_OnFullRxBuf(void)
 {
     /* Write your code here ... */
-	char *aux; // variable auxiliar de lectura para comprobar errores
-	if(PuertoSerie_RecvBlock(&aux, sizeof(aux), &rec) == ERR_OK) {
+	char aux[5]; // variable auxiliar de lectura para comprobar errores
+	if(PuertoSerie_RecvBlock(aux, 5, &rec) == ERR_OK) {
 		// en caso de no haber ningún error, lo guardamos en la variable compartida
-		valor_usuario = aux;
+		strcpy(valor_usuario, aux);
+		valor_leido = TRUE;
 	}
 }
 
@@ -279,9 +283,9 @@ void Temperatura_OnCalibrationEnd(void)
 
 /*
 ** ===================================================================
-**     Event       :  ContadorAlarma_OnInterrupt (module Events)
+**     Event       :  Contador250ms_OnInterrupt (module Events)
 **
-**     Component   :  ContadorAlarma [TimerInt]
+**     Component   :  Contador250ms [TimerInt]
 **     Description :
 **         When a timer interrupt occurs this event is called (only
 **         when the component is enabled - <Enable> and the events are
@@ -291,11 +295,12 @@ void Temperatura_OnCalibrationEnd(void)
 **     Returns     : Nothing
 ** ===================================================================
 */
-extern int contador_alarma;
-void ContadorAlarma_OnInterrupt(void)
+extern int contador_250ms;
+void Contador250ms_OnInterrupt(void)
 {
   /* Write your code here ... */
-  contador_alarma ++;
+  contador_250ms ++;
+  contador_250ms %= 4; // reiniciamos el contador cada segundo (se cumple un ciclo)
 }
 
 /* END Events */

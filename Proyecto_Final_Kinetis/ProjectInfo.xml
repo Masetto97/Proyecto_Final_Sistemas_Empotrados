@@ -64,7 +64,7 @@
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/BitIoLdd7.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/CS1.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Contador.c</PathName>
-      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/ContadorAlarma.c</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Contador250ms.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Cpu.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/DS1.c</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Display.c</PathName>
@@ -117,7 +117,7 @@
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/CS1.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/CS1config.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Contador.h</PathName>
-      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/ContadorAlarma.h</PathName>
+      <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Contador250ms.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Cpu.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/DS1.h</PathName>
       <PathName>/home/david/workspace.kds/Proyecto_Final_Sistemas_Empotrados/Proyecto_Final_Kinetis/Generated_Code/Display.h</PathName>

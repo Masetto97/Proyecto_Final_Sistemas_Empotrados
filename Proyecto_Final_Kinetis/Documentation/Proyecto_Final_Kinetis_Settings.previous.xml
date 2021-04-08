@@ -658,7 +658,7 @@ rising or falling edge
     <Methods>
       <Init v="generate code" />
       <Deinit v="don&amp;apos;t generate code" />
-      <Enable v="don&amp;apos;t generate code" />
+      <Enable v="generate code" />
       <Disable v="generate code" />
       <SetEventMask v="don&amp;apos;t generate code" />
       <GetEventMask v="don&amp;apos;t generate code" />
@@ -741,7 +741,7 @@ rising or falling edge
           <Methods>
             <Init v="generate code" />
             <Deinit v="don&amp;apos;t generate code" />
-            <Enable v="don&amp;apos;t generate code" />
+            <Enable v="generate code" />
             <Disable v="generate code" />
             <SetEventMask v="don&amp;apos;t generate code" />
             <GetEventMask v="don&amp;apos;t generate code" />
@@ -766,7 +766,7 @@ rising or falling edge
       </group>
     </Properties>
     <Methods>
-      <Enable v="don&amp;apos;t generate code" />
+      <Enable v="generate code" />
       <Disable v="generate code" />
       <EnableEvent v="don&amp;apos;t generate code" />
       <DisableEvent v="don&amp;apos;t generate code" />
@@ -814,7 +814,7 @@ rising or falling edge
         <Interrupt_TxD_priority v="medium priority" />
         <Interrupt_Error v="INT_UART0_ERR" />
         <Interrupt_Error_priority v="medium priority" />
-        <Input_buffer_size v="4" />
+        <Input_buffer_size v="5" />
         <Output_buffer_size v="100" />
         <group name="Handshake">
           <boolgroup name="CTS" v="Disabled" />

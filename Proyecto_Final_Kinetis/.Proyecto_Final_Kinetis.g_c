@@ -75,10 +75,10 @@
       <XtraAge13>1384222410</XtraAge13>
       <XtraAge17>1384222069</XtraAge17>
       <XtraAge23>1384543913</XtraAge23>
-      <XtraAge24>1384543913</XtraAge24>
+      <XtraAge24>1384678776</XtraAge24>
       <XtraAge26>1384221090</XtraAge26>
-      <XtraAge27>1384543913</XtraAge27>
-      <XtraAge28>1384544043</XtraAge28>
+      <XtraAge27>1384678776</XtraAge27>
+      <XtraAge28>1384678776</XtraAge28>
       <XtraAge29>1384221934</XtraAge29>
       <GenExtraFileType33>5</GenExtraFileType33>
       <GenExtraFileType32>4</GenExtraFileType32>
@@ -542,7 +542,7 @@
         <Line>Events</Line>
       </GenEventModules>
       <GenMethodsInEvents lines_count="13">
-        <Line>ContadorAlarma_OnInterrupt</Line>
+        <Line>Contador250ms_OnInterrupt</Line>
         <Line>Temperatura_OnEnd</Line>
         <Line>Temperatura_OnCalibrationEnd</Line>
         <Line>Contador_OnInterrupt</Line>
@@ -567,7 +567,7 @@
         <Line>BitIoLdd6</Line>
         <Line>BitIoLdd7</Line>
         <Line>Contador</Line>
-        <Line>ContadorAlarma</Line>
+        <Line>Contador250ms</Line>
         <Line>Cpu</Line>
         <Line>CS1</Line>
         <Line>Display</Line>
@@ -643,14 +643,14 @@
         <Line>SHCP1</Line>
         <Line>BitIoLdd7</Line>
         <Line>WAIT1</Line>
-        <Line>ContadorAlarma</Line>
+        <Line>Contador250ms</Line>
         <Line>TimerIntLdd2</Line>
         <Line>TU3</Line>
       </GenBeanModules>
     </GenFiles>
     <SignalListFile />
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>15</ProjectModificationStamp>
+    <ProjectModificationStamp>19</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>false</Generated>
@@ -725,7 +725,7 @@
     <GenDriverVersion>01.00</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
     <HeaderAge>1384221335</HeaderAge>
-    <CodeAge>1384543913</CodeAge>
+    <CodeAge>1384678776</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>10</GenNumMethods>
     <SetClockConfiguration>false</SetClockConfiguration>
@@ -2414,8 +2414,8 @@
     <GenComponentVersion>02.611</GenComponentVersion>
     <GenDriverVersion>01.01</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1384426429</HeaderAge>
-    <CodeAge>1384426429</CodeAge>
+    <HeaderAge>1384611855</HeaderAge>
+    <CodeAge>1384611855</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>24</GenNumMethods>
     <Enable>false</Enable>
@@ -5725,16 +5725,16 @@
         <Init>true</Init>
         <Deinit>false</Deinit>
         <GetDir>false</GetDir>
-        <SetDir>false</SetDir>
-        <SetInput>false</SetInput>
-        <SetOutput>false</SetOutput>
+        <SetDir>true</SetDir>
+        <SetInput>true</SetInput>
+        <SetOutput>true</SetOutput>
         <GetVal>true</GetVal>
         <PutVal>true</PutVal>
         <ClrVal>true</ClrVal>
         <SetVal>true</SetVal>
-        <NegVal>false</NegVal>
+        <NegVal>true</NegVal>
         <ConnectPin>false</ConnectPin>
-        <GetRawVal>false</GetRawVal>
+        <GetRawVal>true</GetRawVal>
         <GenNumEvents>0</GenNumEvents>
         <GenSmartUserChangesDetected_Header>false</GenSmartUserChangesDetected_Header>
         <GenSmartUserChangesDetected_Code>false</GenSmartUserChangesDetected_Code>
@@ -5985,12 +5985,12 @@
   </ComponentID_63>
   <ComponentID_64>
     <Generated>true</Generated>
-    <GenCompName>ContadorAlarma</GenCompName>
+    <GenCompName>Contador250ms</GenCompName>
     <GenComponentVersion>02.161</GenComponentVersion>
     <GenDriverVersion>01.02</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1384543913</HeaderAge>
-    <CodeAge>1384543913</CodeAge>
+    <HeaderAge>1384678776</HeaderAge>
+    <CodeAge>1384678776</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>14</GenNumMethods>
     <Enable>false</Enable>
@@ -6009,13 +6009,13 @@
     <SetFreqMHz>false</SetFreqMHz>
     <GenNumEvents>3</GenNumEvents>
     <BeforeNewSpeed_Selected>0</BeforeNewSpeed_Selected>
-    <BeforeNewSpeed_Name>ContadorAlarma_BeforeNewSpeed</BeforeNewSpeed_Name>
+    <BeforeNewSpeed_Name>Contador250ms_BeforeNewSpeed</BeforeNewSpeed_Name>
     <BeforeNewSpeed_Priority>interrupts disabled</BeforeNewSpeed_Priority>
     <AfterNewSpeed_Selected>0</AfterNewSpeed_Selected>
-    <AfterNewSpeed_Name>ContadorAlarma_AfterNewSpeed</AfterNewSpeed_Name>
+    <AfterNewSpeed_Name>Contador250ms_AfterNewSpeed</AfterNewSpeed_Name>
     <AfterNewSpeed_Priority>interrupts disabled</AfterNewSpeed_Priority>
     <OnInterrupt_Selected>2</OnInterrupt_Selected>
-    <OnInterrupt_Name>ContadorAlarma_OnInterrupt</OnInterrupt_Name>
+    <OnInterrupt_Name>Contador250ms_OnInterrupt</OnInterrupt_Name>
     <OnInterrupt_Priority>same as interrupt</OnInterrupt_Priority>
     <GenSmartUserChangesDetected_Header>false</GenSmartUserChangesDetected_Header>
     <GenSmartUserChangesDetected_Code>false</GenSmartUserChangesDetected_Code>
@@ -6043,7 +6043,7 @@
       <GenDriverVersion>01.02</GenDriverVersion>
       <GenEventModule>Events</GenEventModule>
       <HeaderAge>1384543913</HeaderAge>
-      <CodeAge>1384543913</CodeAge>
+      <CodeAge>1384678776</CodeAge>
       <AsemblAge>-1</AsemblAge>
       <GenNumMethods>17</GenNumMethods>
       <Init>true</Init>
