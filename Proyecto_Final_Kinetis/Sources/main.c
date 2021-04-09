@@ -295,16 +295,23 @@ int main(void)
   /* For example: for(;;) { } */
   for(;;) {
 	  // gestión de la alarma
-	  if (comprobar_alarma()) {
-	  	if (!alarma_activa) {
-	  		activar_alarma();
-	  	}
-	  	sonar_alarma();
+	  if (modo_funcionamiento != MODO_CONFIG) { // solo en los modos de hora y temperatura
+		  if (comprobar_alarma()) {
+			if (!alarma_activa) {
+				activar_alarma();
+			}
+			sonar_alarma();
+		  } else {
+			// solo desactivamos si previamente estaba activado
+			if (alarma_activa) {
+				desactivar_alarma();
+			}
+		  }
 	  } else {
-		// solo desactivamos si previamente estaba activado
-	    if (alarma_activa) {
-	    	desactivar_alarma();
-		}
+		 // solo desactivamos si previamente estaba activado
+		 if (alarma_activa) {
+			 desactivar_alarma();
+		 }
 	  }
 
 	  // recogida de datos y temperatura
@@ -366,7 +373,6 @@ int main(void)
 			  modo_funcionamiento = MODO_CONFIG;
 			  modo_configuracion = 0;
 			  valor_leido = FALSE;
-			  desactivar_alarma();
 		  }
 	  }
 
